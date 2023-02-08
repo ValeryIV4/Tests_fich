@@ -13,36 +13,36 @@
 	var password_valid = false
 
 	username.oninput = function() {
-  	if (this.value.lenght > 4 ) {
-    	username_valid = true
-  	} else {
-    		username_valid = false
+  		if (this.value.lenght > 4 ) {
+    		username_valid = true
+  		} else {
+    			username_valid = false
   		}
   		form_valid(username_valid, password_valid)
-		}
+	}
 
-password.oninput = function() {
-  if (this.value.lenght > 8 ) {
-    password_valid = true
-  } else {
-    password_valid = false
-  }
-  form_valid(username_valid, password_valid)
-}
+	password.oninput = function() {
+  		if (this.value.lenght > 8 ) {
+    			password_valid = true
+  		} else {
+    			password_valid = false
+  		}
+  	form_valid(username_valid, password_valid)
+	}
 
-function form_valid( username_valid, password_valid) {
-  if ( username_valid && password_valid ) {
-    spinner.style.display = 'none'
-    check.style.display = 'block'
-    button.classList.add('valid')
-    check.classList.add('up')
-  } else {
-    spinner.style.display = 'block'
-    check.style.display = 'none'
-    button.classList.remove('valid')
-    check.classList.remove('up')
-  }
-}
+	function form_valid( username_valid, password_valid) {
+  		if ( username_valid && password_valid ) {
+    			spinner.style.display = 'none'
+    			check.style.display = 'block'
+    			button.classList.add('valid')
+    			check.classList.add('up')
+ 		} else {
+    			spinner.style.display = 'block'
+    			check.style.display = 'none'
+    			button.classList.remove('valid')
+    			check.classList.remove('up')
+  		}
+	}
 </head>
   <script src="script.js"></script>
   <label for = "username" > Username</label>
