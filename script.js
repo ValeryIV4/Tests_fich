@@ -17,7 +17,7 @@ username.oninput = function() {
 }
 
 password.oninput = function() {
-  if (this.value.lenght > 4 ) {
+  if (this.value.lenght > 8 ) {
     password_valid = true
   } else {
     password_valid = false
